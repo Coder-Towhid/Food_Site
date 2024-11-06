@@ -1,0 +1,14 @@
+input[type="date"]::-webkit-input-placeholder {
+    color: transparent;
+}
+
+/* Change the color of the calendar icon */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: transparent;
+    color: white;
+}
+
+/* For Firefox */
+input[type="date"]::-moz-calendar-picker-indicator {
+    color: white;
+}

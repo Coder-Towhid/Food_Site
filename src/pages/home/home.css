@@ -8,3 +8,19 @@
     z-index: 10;
     background-color: rgba(254, 191, 0, 1);
 }
+
+.food-item-subheader::before {
+    content: "▪";
+    /* Unicode character for a square dot */
+    display: inline-block;
+    margin-right: 4px;
+    /* Adjust spacing between dot and text */
+    color: currentColor;
+    font-size: 34px;
+    position: relative;
+    bottom: -5px;
+}
+
+.table-booking {
+    background-image: url('../../assets/images/booking.jpg')
+}

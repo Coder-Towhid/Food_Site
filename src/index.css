@@ -25,3 +25,30 @@
     background: rgba(251, 247, 242, 1);
 
 }
+
+input[type="date"]::-webkit-calendar-picker-icon {
+    color: white;
+    /* Set the icon color to white */
+}
+
+input[type="date"]::-webkit-calendar-picker-icon {
+    background: transparent;
+    /* Make the background transparent */
+    border: none;
+    /* Remove the border */
+}
+
+input[type="date"]::-webkit-calendar-picker-icon:hover {
+    color: white;
+    /* Maintain white color on hover */
+}
+
+input[type="date"]:focus {
+    outline: none;
+    /* Remove the focus outline */
+}
+
+/* Hide the default date format */
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}

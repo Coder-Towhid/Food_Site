@@ -8,9 +8,11 @@ import pizza from '../../assets/images/pizza.png';
 import burger from '../../assets/images/burger.jpg';
 import fries from '../../assets/images/fries.jpg';
 import chicken from '../../assets/images/chicken.jpg';
+
 import "./home.css";
 import Tabs from "../../components/Tabs/tabs";
 import CarouselComponent from "../../components/carousel/CarouselComponent";
+import FormComponent from "../../components/form/form";
 
 
 
@@ -156,28 +158,79 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="food-items">
+            <div className="food-items relative overflow-hidden">
                 <div className="max-w-5xl py-16 px-6 mx-auto ">
                     <div>
-                        <span className="text-red-600 font-bold py-2">Crispy, Every Bite Taste</span>
+                        <span className="food-item-subheader text-red-600 font-bold py-2">Crispy, Every Bite Taste</span>
                         <h2 className="text-4xl uppercase font-bold py-2">Popular food items</h2>
                     </div>
                     <div className="carousel py-10">
                         <CarouselComponent slidesToShow={4} autoplay={false} >
-                            <div><img src={burger} alt="Slide 1" /></div>
+                            <div >
+                                <div className="py-6 px-4 flex flex-col gap-4  items-center bg-white">
 
-                            <div><img src={pizza} alt="Slide 2" /></div>
-                            <div><img src={fries} alt="Slide 3" /></div>
-                            <div><img src={chicken} alt="Slide 4" /></div>
+                                    <img className="max-h-44 max-w-36" src={burger} alt="Slide 1" />
+                                    <hr class="w-[20%] border-2 border-red-600 rounded-md" />
+                                    <h3 className="uppercase font-bold">Vegetables Burger</h3>
+                                    <span className="text-gray-500 text-center text-sm">Barbecue Italian cuisine pizza</span>
+                                </div>
+
+                            </div>
+                            <div > <div className=" py-6 px-4 flex flex-col gap-4  items-center bg-white"><img className="max-h-24 max-w-36" src={pizza} alt="Slide 2" />
+                                <hr class="w-[20%] border-2 border-red-600 rounded-md" />
+                                <h3 className="uppercase font-bold">Spacial Pizza </h3>
+                                <span className="text-gray-500 text-center text-sm">Barbecue Italian cuisine pizza</span>
+
+                            </div>
+
+                            </div>
+                            <div >
+                                <div className="py-6 px-4 flex flex-col gap-4 items-center bg-white"><img className="max-h-44 max-w-36" src={fries} alt="Slide 3" />
+                                    <hr class="w-[20%] border-2 border-red-600 rounded-md" />
+                                    <h3 className="uppercase font-bold">Spacial French fries </h3>
+                                    <span className="text-gray-500 text-center text-sm">Barbecue Italian cuisine pizza</span>
+                                </div>
+                            </div>
+                            <div >
+                                <div className="py-6 px-4 flex flex-col gap-4  items-center bg-white"><img className="max-h-44 max-w-36" src={chicken} alt="Slide 4" />
+                                    <hr class="w-[20%] border-2 border-red-600 rounded-md" />
+                                    <h3 className="uppercase font-bold">Cuisine Chicken</h3>
+                                    <span className="text-gray-500 text-center text-sm">Barbecue Italian cuisine pizza</span>
+                                </div>
+                            </div>
+
                         </CarouselComponent>
+
                     </div>
                 </div>
+                <div className="hidden  bottom-[100px]  lg:left-[-180px] lg:block absolute">
+                    <img className="w-[270px] h-[270px] rotate-[-55deg] " src={Salad} alt="" />
+                </div>
+
+            </div >
+
+
+            <div className="table-booking bg-cover ">
+                <div className="max-w-5xl py-16 px-6 mx-auto ">
+                    <div className="lg:max-w-md md:max-w-md w-full">
+                        <div className="py-4">
+                            <span className="food-item-subheader text-red-600 font-bold py-2">Book Now</span>
+                            <h2 className="text-4xl uppercase font-bold py-2 text-white">Book Your Table</h2>
+                            <span className="block text-gray-400 max-w-lg">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</span>
+                        </div>
+
+                        <FormComponent />
+                    </div>
+
+
+                </div>
+
 
             </div>
 
 
 
-        </div>
+        </div >
 
     );
 };
