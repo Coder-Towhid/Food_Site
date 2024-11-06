@@ -1,0 +1,10 @@
+.header-text {
+    background: linear-gradient(90deg, rgba(189, 31, 23, 0) 32.88%, rgba(189, 31, 23, 0.7) 100%);
+
+}
+
+/* Offer */
+.offer-box {
+    z-index: 10;
+    background-color: rgba(254, 191, 0, 1);
+}

@@ -1,0 +1,17 @@
+.slick-next,
+.slick-prev {
+    border-radius: 50%;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.25);
+    position: absolute;
+    color: "#FF6347";
+    width: 34px;
+    height: 34px;
+    top: -64px;
+    right: 0;
+    padding: 14px;
+}
+
+.slick-prev {
+    position: absolute;
+    left: 90%;
+}

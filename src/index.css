@@ -1,0 +1,27 @@
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hero {
+    background-image: url('assets/backgrounds/hero_image.png');
+}
+
+.redPrimary {
+    background: linear-gradient(123.4deg, #BD1F17 40.8%, #A61D13 76.4%, #8E1B0F 120.69%);
+}
+
+.border-color-red {
+    border-color: rgba(181, 43, 29, 1);
+
+}
+
+.background-button {
+    background-color: rgba(181, 43, 29, 1);
+}
+
+.food-items {
+    background: rgba(251, 247, 242, 1);
+
+}
