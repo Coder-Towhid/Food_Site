@@ -18,9 +18,19 @@ const FormComponent = () => {
                     type="date"
                     placeholder="Reservation Date"
                 />
+                <div className="relative">
 
-                <input
-                    className="flex-1 my-4 lg:m-0 md:m-0 w-full  p-2 bg-transparent placeholder-white border border-bg-white* text-white " type="number" placeholder="Total People" />
+                    <span className="number-wrapper">
+
+                        <input
+                            className="flex-1 my-4 lg:m-0 md:m-0 w-full  p-2 bg-transparent placeholder-white border border-bg-white* text-white " type="number" min={0} placeholder="Total People" />
+                        <div className="number-arrows">
+
+                        </div>
+                    </span>
+
+                </div>
+
 
             </div>
 

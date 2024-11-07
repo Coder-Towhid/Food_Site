@@ -1,14 +1,60 @@
-input[type="date"]::-webkit-input-placeholder {
-    color: transparent;
+.number-wrapper {
+    position: relative;
 }
 
-/* Change the color of the calendar icon */
+.number-wrapper:after,
+.number-wrapper:before {
+
+    position: absolute;
+    right: 10px;
+    width: 1em;
+    height: 1em;
+    font-size: 10px;
+    pointer-events: none;
+}
+
+.number-wrapper:after {
+    color: white;
+    content: "\25B3";
+    top: 0;
+
+}
+
+.number-wrapper:before {
+    color: white;
+    content: "\25BD";
+
+    bottom: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 0;
+
+}
+
 input[type="date"]::-webkit-calendar-picker-indicator {
-    background-color: transparent;
-    color: white;
+    filter: invert(100%);
 }
 
-/* For Firefox */
-input[type="date"]::-moz-calendar-picker-indicator {
+input[type="date"]::-webkit-datetime-edit-month-field {
+    display: none;
+}
+
+input[type="date"]::-webkit-datetime-edit-day-field {
+    display: none;
+}
+
+input[type="date"]::-webkit-datetime-edit-year-field {
+    display: none;
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+    display: none;
+}
+
+input[type="date"]:not(.has-value):before {
     color: white;
+    position: absolute;
+    content: attr(placeholder);
 }
