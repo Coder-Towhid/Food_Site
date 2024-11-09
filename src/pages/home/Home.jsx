@@ -8,7 +8,7 @@ import pizza from '../../assets/images/pizza.png';
 import burger from '../../assets/images/burger.jpg';
 import fries from '../../assets/images/fries.jpg';
 import chicken from '../../assets/images/chicken.jpg';
-
+import profile from '../../assets/images/profile.png'
 import "./home.css";
 import Tabs from "../../components/Tabs/tabs";
 import CarouselComponent from "../../components/carousel/CarouselComponent";
@@ -229,8 +229,117 @@ const Home = () => {
             </div>
 
 
-            <div>
+            <div className="relative overflow-hidden">
+                <div className="max-w-5xl py-16 px-6 mx-auto ">
+                    <div>
+                        <span className="food-item-subheader text-red-600 font-bold py-2">Crispy, Every Bite Taste</span>
+                        <h2 className="text-4xl uppercase font-bold py-2">What Some of my Customers Say</h2>
+                    </div>
+                    <div className="carousel py-10">
 
+                        <CarouselComponent slidesToShow={1} autoplay={false} >
+                            <div >
+                                <div className="flex">
+                                    <div className="flex-[40%] bg-tableyellow p-12 ">
+                                        <div className="flex flex-col gap-20 border-b-2  border-gray-800">
+                                            <div>
+                                                <span className="comment"></span>
+                                                <p >You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly,
+                                                    juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.</p>
+                                            </div>
+
+
+                                            <div className=" py-2 flex justify-between items-center">
+                                                <div>
+                                                    <p>Khalid Al Dawsry</p>
+                                                    <span>Jeddah, Saudi</span>
+                                                </div>
+                                                <div className="relative">
+                                                    <div className="comment-profile-image">
+                                                        <img className="w-[40px] h-[40px] rounded-[50%] object-cover" src={profile} alt="" />
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div className="flex-[60%]">
+
+
+                                        <div className="video-wrapper h-full">
+                                            <iframe
+                                                className="w-full h-full"
+                                                src="https://www.youtube.com/embed/FeNH01zxkwA?si=fij1Y0Z5K-iDmC9B"
+                                                title="YouTube video player"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div >
+                                <div className="flex flex-col-reverse">
+                                    <div className="flex-[40%] bg-tableyellow p-12 ">
+                                        <div className="flex flex-col gap-20 border-b-2  border-gray-800">
+                                            <div>
+                                                <span className="comment"></span>
+                                                <p >You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly,
+                                                    juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.</p>
+                                            </div>
+
+
+                                            <div className=" py-2 flex justify-between items-center">
+                                                <div>
+                                                    <p>Khalid Al Dawsry</p>
+                                                    <span>Jeddah, Saudi</span>
+                                                </div>
+                                                <div className="relative">
+                                                    <div className="comment-profile-image">
+                                                        <img className="w-[40px] h-[40px] rounded-[50%] object-cover" src={profile} alt="" />
+                                                    </div>
+
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div className="flex-[60%]">
+
+
+                                        <div className="video-wrapper h-full">
+                                            <iframe
+                                                className="w-full h-full"
+                                                src="https://www.youtube.com/embed/FeNH01zxkwA?si=fij1Y0Z5K-iDmC9B"
+                                                title="YouTube video player"
+                                                frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </CarouselComponent>
+
+                    </div>
+                </div>
             </div>
 
 

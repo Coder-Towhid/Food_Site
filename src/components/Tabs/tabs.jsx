@@ -8,7 +8,7 @@ const Tabs = () => {
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare non sed est cursus. Vel hac convallis ipsum, facilisi odio pellentesque bibendum viverra tempus.Lorem ipsum dolor sit amet consectetur adipiscing elit do eiusmod tempor incididunt ut labore et dolore magna minim veniam nostrud exercitation."
         },
         Experience: {
-            title: "A journey shaped by passion, skill, and innovations",
+            title: "A journey shaped by the passion, skill, and innovations",
             content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.  Ornare non sed est cursus. ibendum viverra tempus  Ornare non sed est cursus. Vel hac convallis ipsum, facilisi odio pellentesque bibendum viverra tempusv  Ornare non sed est cursus. Vel hac convallis ipsum, facilisi odio pellentesque bibendum viverra tempus "
         },
         Contact: {

@@ -15,7 +15,6 @@ const CarouselComponent = ({ slidesToShow = 1, autoplay = true, autoplaySpeed = 
         speed: 500,
         slidesToShow: slidesToShow,       // Controlled by props
         slidesToScroll: 1,
-
         autoplay: autoplay,               // Controlled by props
         autoplaySpeed: autoplaySpeed,     // Controlled by props
         arrows: true,
