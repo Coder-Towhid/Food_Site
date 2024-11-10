@@ -8,7 +8,7 @@ import SamplePrevArrow from './customArrowLeft';
 import SampleNextArrow from './customArrowRight';
 
 
-const CarouselComponent = ({ slidesToShow = 1, autoplay = true, autoplaySpeed = 3000, children }) => {
+const CarouselComponent = ({ slidesToShow = 1, mdShow = 2, autoplay = true, autoplaySpeed = 3000, children }) => {
     const settings = {
         loop: true,
         infinite: true,
@@ -21,17 +21,17 @@ const CarouselComponent = ({ slidesToShow = 1, autoplay = true, autoplaySpeed = 
         prevArrow: <SamplePrevArrow />,  // Use custom previous arrow
         nextArrow: <SampleNextArrow />,  // Use custom next arrow
         responsive: [
-            {
-                breakpoint: 1024, // For large screens (lg)
-                settings: {
-                    slidesToShow: 4, // 4 slides for large screens
-                    slidesToScroll: 1,
-                },
-            },
+            // {
+            //     breakpoint: 1024, // For large screens (lg)
+            //     settings: {
+            //         slidesToShow: slidesToShow, // 4 slides for large screens
+            //         slidesToScroll: 1,
+            //     },
+            // },
             {
                 breakpoint: 768, // For medium screens (md)
                 settings: {
-                    slidesToShow: 2, // 2 slides for medium screens
+                    slidesToShow: mdShow, // 2 slides for medium screens
                     slidesToScroll: 1,
                 },
             },
