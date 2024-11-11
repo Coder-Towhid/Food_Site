@@ -21,13 +21,13 @@ const CarouselComponent = ({ slidesToShow = 1, mdShow = 2, autoplay = true, auto
         prevArrow: <SamplePrevArrow />,  // Use custom previous arrow
         nextArrow: <SampleNextArrow />,  // Use custom next arrow
         responsive: [
-            // {
-            //     breakpoint: 1024, // For large screens (lg)
-            //     settings: {
-            //         slidesToShow: slidesToShow, // 4 slides for large screens
-            //         slidesToScroll: 1,
-            //     },
-            // },
+            {
+                breakpoint: 1024, // For large screens (lg)
+                settings: {
+                    slidesToShow: slidesToShow, // 4 slides for large screens
+                    slidesToScroll: 1,
+                },
+            },
             {
                 breakpoint: 768, // For medium screens (md)
                 settings: {

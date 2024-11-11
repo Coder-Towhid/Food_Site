@@ -28,19 +28,19 @@
 
 @media (max-width: 856px) {
     .slick-prev {
-
         left: 85%;
+
     }
 }
 
-@media (max-width: 670px) {
+@media (max-width: 768px) {
     .slick-prev {
         left: 40%;
-        top: 120%;
+        top: 106%;
     }
 
     .slick-next {
         left: 55%;
-        top: 120%;
+        top: 106%;
     }
 }
