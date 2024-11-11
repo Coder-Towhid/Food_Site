@@ -37,24 +37,59 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(100%);
 }
 
-input[type="date"]::-webkit-datetime-edit-month-field {
+
+.date-input {
+    background-color: transparent;
+    color: white;
+    position: relative;
+}
+
+/* Hide the actual date fields initially */
+.date-input::-webkit-datetime-edit-month-field,
+.date-input::-webkit-datetime-edit-day-field,
+.date-input::-webkit-datetime-edit-year-field,
+.date-input::-webkit-datetime-edit-text {
     display: none;
 }
 
-input[type="date"]::-webkit-datetime-edit-day-field {
+/* Add a custom placeholder when there's no date value */
+.date-input.has-placeholder::before {
+    content: attr(placeholder);
+    color: white;
+    position: absolute;
+    left: 0;
+}
+
+
+
+
+.dateShow::-webkit-datetime-edit-month-field,
+.dateShow::-webkit-datetime-edit-day-field,
+.dateShow::-webkit-datetime-edit-year-field,
+.dateShow::-webkit-datetime-edit-text {
+    display: inline-block;
+}
+
+.dateHide::-webkit-datetime-edit-month-field,
+.dateHide::-webkit-datetime-edit-day-field,
+.dateHide::-webkit-datetime-edit-year-field,
+.dateHide::-webkit-datetime-edit-text {
     display: none;
 }
 
-input[type="date"]::-webkit-datetime-edit-year-field {
-    display: none;
-}
 
-input[type="date"]::-webkit-datetime-edit-text {
-    display: none;
+
+
+.dateHide input[type="date"]:not(.has-value):before {
+    color: white;
+    position: absolute;
+    content: attr(placeholder);
+
 }
 
 input[type="date"]:not(.has-value):before {
     color: white;
     position: absolute;
     content: attr(placeholder);
+
 }
