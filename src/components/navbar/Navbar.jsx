@@ -24,16 +24,17 @@ const Navbar = () => {
 
 
     return (
-        <div className={`z-20 transition-all duration-500 ease-in-out ${isFixed
-            ? "fixed top-0 left-0 w-full redPrimary shadow-lg"
-            : "bg-transparent"
-            }`}
-            style={{ transition: "top 0.5s ease-in-out, box-shadow 0.5s ease-in-out" }}>
+        // <div className={`z-20  top-[-200px] ease-in-out ${isFixed
+        //     ? "fixed top-[0px] left-0 w-full redPrimary shadow-lg"
+        //     : "bg-transparent"
+        //     }`}
+        //     style={{ transition: "top 0.5s ease-in-out, box-shadow 0.5s ease-in-out" }}>
+        <div className={`fixed top-0 left-0 w-full z-20 ${isFixed ? "redPrimary shadow-lg" : "bg-transparent"}`} >
 
             <header className="z-20 relative text-white py-4">
                 < div className="max-w-5xl flex justify-between mx-auto px-6 items-center">
                     {/* Logo Section */}
-                    <div className="flex items-center gap-12">
+                    < div className="flex items-center gap-12" >
                         <svg width="202" height="38" viewBox="0 0 202 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_1_53)">
                                 <path d="M19.5868 0.5C20.2911 0.597145 20.9954 0.670003 21.6876 0.791434C25.9498 1.54431 29.5199 3.5722 32.3856 6.81441C34.9964 9.76518 36.5143 13.2381 36.9029 17.1603C37.3643 21.9326 36.1621 26.2798 33.2721 30.117C30.5156 33.7721 26.8848 36.14 22.3919 37.075C16.8546 38.2286 11.7788 37.0871 7.26157 33.6628C3.63079 30.9063 1.37217 27.2391 0.400725 22.7947C0.230722 22.0297 0.182149 21.2525 0.0728615 20.4754C0.0607184 20.3418 0.0242891 20.2204 0.012146 20.0868C0.012146 19.3582 0.012146 18.6418 0.012146 17.9132C0.0364322 17.6582 0.0728615 17.391 0.0971476 17.136C0.534299 13.1531 2.05219 9.64375 4.73581 6.66869C7.58944 3.51149 11.1109 1.53216 15.3124 0.791434C16.0046 0.670003 16.7089 0.597145 17.4132 0.5C18.1418 0.5 18.8582 0.5 19.5868 0.5ZM18.5061 1.87217C9.08303 1.86003 1.38432 9.5466 1.37217 18.9818C1.36003 28.4048 9.04661 36.1035 18.4818 36.1157C27.9048 36.1278 35.6035 28.4412 35.6157 19.0061C35.6278 9.58303 27.9413 1.88431 18.5061 1.87217Z" fill="#FEBF00" />
@@ -60,49 +61,83 @@ const Navbar = () => {
                             </ul>
                         </nav>
 
-                    </div>
+                    </div >
 
 
 
                     {/* Book a Table Button */}
-                    <div className="hidden md:flex items-center">
+                    < div className="hidden md:flex items-center" >
                         <button className="px-6 py-2 font-bold text-black bg-yellow-500  ">
                             Book a Table
                         </button>
-                    </div>
+                    </div >
 
                     {/* Mobile Menu Button */}
-                    <button
-                        className="md:hidden flex items-center"
+                    < button
+                        className="md:hidden flex items-center "
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                     >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+
+
+                        {
+                            isMenuOpen && (
+                                <svg
+
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    className="w-6 h-6 text-white cursor-pointer "
+                                    onClick={() => console.log("Close clicked!")}
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12"
+                                    />
+                                </svg>
+                            )
+
+                        }
+
+
+
+                        {
+                            !isMenuOpen && (
+                                < svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            )
+
+                        }
+
+                    </button >
+                </div >
 
                 {/* Mobile Dropdown Menu */}
-                {isMenuOpen && (
-                    <nav className="absolute z-20 w-full md:hidden mobile-nav">
-                        <ul className="flex flex-col gap-4 px-6 py-4">
-                            <li><a href="#" className="text-white">Home</a></li>
-                            <li><a href="/about" className="text-white">About</a></li>
-                            <li><a href="#" className="text-white">Portfolio</a></li>
-                            <li><a href="#" className="text-white">Clients</a></li>
-                            <li><a href="#" className="text-white">Blog</a></li>
-                            <li><a href="#" className="text-white">Contact</a></li>
-                            <li>
-                                <button className="w-full px-6 py-2 font-bold bg-yellow-500 text-white rounded">
-                                    Book a Table
-                                </button>
-                            </li>
-                        </ul>
-                    </nav>
-                )}
+                {
+                    isMenuOpen && (
+                        <nav className="absolute z-20 w-full md:hidden mobile-nav">
+                            <ul className="flex flex-col gap-4 px-6 py-4">
+                                <li><a href="#" className="text-white">Home</a></li>
+                                <li><a href="/about" className="text-white">About</a></li>
+                                <li><a href="#" className="text-white">Portfolio</a></li>
+                                <li><a href="#" className="text-white">Clients</a></li>
+                                <li><a href="#" className="text-white">Blog</a></li>
+                                <li><a href="#" className="text-white">Contact</a></li>
+                                <li>
+                                    <button className="w-full px-6 py-2 font-bold bg-yellow-500 text-white rounded">
+                                        Book a Table
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    )
+                }
             </header >
 
-        </div>
+        </div >
     )
 }
 

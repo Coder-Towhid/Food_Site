@@ -27,13 +27,13 @@ const Home = () => {
 
 
 
-                <div class=" h-screen hero bg-center  w-full">
+                <div class=" lg:h-screen h-screen hero bg-center w-full">
                     <Navbar />
 
 
-                    <div class="redPrimary h-screen absolute bg-auto inset-0 bg-black opacity-90"></div>
-                    <div class="relative max-w-5xl px-6 mx-auto z-10 text-white  lg:flex md:flex h-full  items-center block ">
-                        <div className="flex-1 lg:h-2/5 md:h-2/5 pb-4" >
+                    <div class="redPrimary lg:h-screen h-auto absolute bg-auto inset-0 bg-black opacity-90"></div>
+                    <div class="relative max-w-5xl px-6 mx-auto z-10 text-white flex lg:flex-row md:flex-row  h-full  items-center flex-col justify-center ">
+                        <div className="md:flex-1 lg:flex-1 lg:h-2/5 md:h-2/5 pb-4" >
                             <div className="lg:absolute md:absolute z-10 left-3.5">
                                 <div>
                                     <h1 className="text-4xl leading-normal lg:leading-normal md:leading-normal md:text-5xl lg:text-6xl  uppercase py-4 lg:p-4 md:p-4  header-text">Taste the authentic <br />
@@ -55,7 +55,7 @@ const Home = () => {
                             </div>
 
                         </div>
-                        <div className=" flex-1 lg:h-3/5 md:h-3/5 ">
+                        <div className="lg:flex-1 md:flex-1  lg:h-3/5 md:h-3/5 ">
                             <div className="relative w-full h-full ">
                                 <img class="transform h-full scale-x-[-1] object-cover" src={heroImage} alt="" />
 
@@ -183,7 +183,7 @@ const Home = () => {
                             <h2 className="text-3xl uppercase font-bold py-2">Popular food items</h2>
                         </div>
                         <div className="carousel py-10">
-                            <CarouselComponent slidesToShow={4} autoplay={false} >
+                            <CarouselComponent slidesToShow={4} autoplay={true} >
                                 <div className="mb-8">
                                     <div className="py-6 px-4 flex flex-col gap-4  items-center bg-white">
 
@@ -252,7 +252,7 @@ const Home = () => {
                     <div className="hidden md:block lg:block" >
                         <img className="w-[470px] bottom-[100px] absolute  right-[-100px] h-[470px] object-contain rotate-[25deg]" src={grass} alt="" />
                     </div>
-                    <div className="hidden md:block lg:block" >
+                    <div className="hidden md:block lg:block " >
                         <img className="w-[270px] absolute top-[100px]  left-[-140px] h-[270px] object-cover rotate-[45deg]" src={SlicedTomato} alt="" />
                     </div>
 

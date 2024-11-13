@@ -11,6 +11,7 @@ import SampleNextArrow from './customArrowRight';
 const CarouselComponent = ({ slidesToShow = 1, mdShow = 2, autoplay = true, autoplaySpeed = 3000, children }) => {
     const settings = {
         loop: true,
+
         infinite: true,
         speed: 500,
         slidesToShow: slidesToShow,       // Controlled by props

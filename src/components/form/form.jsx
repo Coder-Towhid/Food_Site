@@ -122,18 +122,18 @@ const FormComponent = () => {
 
             {/* Popup for "Table Booked" confirmation */}
             {isPopupVisible && (
-                <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+                <div className="fixed z-20 inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="bg-white p-6 rounded-lg shadow-lg">
-                        <p>{formData.name}</p>
-                        <p>{formData.email}</p>
-                        <p>{formData.date}</p>
-                        <p>{formData.totalPeople}</p>
-                        <p>{formData.message}</p>
-                        <h2 className="text-xl font-semibold text-green-600 mb-4">Thank you for Booking!</h2>
+                        <p><span className="font-bold">Name: </span>{formData.name}</p>
+                        <p><span className="font-bold">Email:</span> {formData.email ? formData.email : "null"}</p>
+                        <p><span className="font-bold">Date:</span> {formData.date ? formData.date : "null"}</p>
+                        <p><span className="font-bold">N.People: </span>{formData.totalPeople ? formData.totalPeople : "null"}</p>
+                        <p><span className="font-bold">Note:</span> {formData.message ? formData.message : "null"}</p>
+                        <h2 className="text-xl font-semibold text-green-600 my-4">Thank you for Booking!</h2>
 
                         <button
                             onClick={closePopup}
-                            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+                            className="mt-4 px-4 py-2 redPrimary text-white rounded-md hover:bg-red-400 focus:outline-none"
                         >
                             Close
                         </button>
