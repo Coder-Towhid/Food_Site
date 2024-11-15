@@ -426,7 +426,9 @@ const Home = () => {
 
 
             </div >
+
             <Footer />
+
 
 
         </>
