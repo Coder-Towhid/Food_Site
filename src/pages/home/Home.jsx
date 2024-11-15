@@ -177,43 +177,72 @@ const Home = () => {
                 <div className="food-items relative overflow-hidden">
 
 
-                    <div className="max-w-5xl py-16 px-6 mx-auto ">
+                    <div className="max-w-container px-4 py-8 lg:py-[120px] lg:py-[100px] mx-auto ">
                         <div>
-                            <span className="food-item-subheader text-red-600 font-bold py-2">Crispy, Every Bite Taste</span>
-                            <h2 className="text-3xl uppercase font-bold py-2">Popular food items</h2>
+                            <span className="font-Roboto leading-[26px] lg:leading-8 text-base lg:text-xl food-item-subheader text-red-600 font-bold py-2">Crispy, Every Bite Taste</span>
+                            <h2 className="font-Bebas text-[40px] leading-[48px] lg:text-[62px] lg:leading-[62px] uppercase font-bold py-2">Popular food items</h2>
                         </div>
                         <div className="carousel py-10">
                             <CarouselComponent slidesToShow={4} autoplay={true} >
-                                <div className="mb-8">
-                                    <div className="py-6 px-4 flex flex-col gap-4  items-center bg-white">
+                                <div className="mb-8 ">
+                                    <div className="p-8 min-h-[300px] flex flex-col gap-4  items-center bg-white">
+                                        <div className="h-[134px]">
+                                            <img className="max-h-[117px] max-w-[175px]" src={burger} alt="Slide 1" />
+                                        </div>
 
-                                        <img className="max-h-44 max-w-36" src={burger} alt="Slide 1" />
+
                                         <hr class="w-[20%] border-2 border-red-600 rounded-md" />
-                                        <h3 className="uppercase font-bold">Vegetables Burger</h3>
-                                        <span className="text-gray-500 text-center text-sm">Barbecue Italian cuisine pizza</span>
+                                        <div>
+                                            <h3 className="font-Bebas lg:text-2xl lg:leading-9 text-center uppercase font-bold">Vegetables Burger</h3>
+                                            <span className="block lg:font-Roboto text-base leading-8 font-normal  text-gray-500 text-center">Barbecue Italian cuisine pizza</span>
+                                        </div>
+
                                     </div>
 
                                 </div>
-                                <div className="mb-8"> <div className=" py-6 px-4 flex flex-col gap-4  items-center bg-white"><img className="max-h-24 max-w-36" src={pizza} alt="Slide 2" />
-                                    <hr class="w-[20%] border-2 border-red-600 rounded-md" />
-                                    <h3 className="uppercase font-bold">Spacial Pizza </h3>
-                                    <span className="text-gray-500 text-center text-sm">Barbecue Italian cuisine pizza</span>
+                                <div className="mb-8">
+                                    <div className="p-8 min-h-[300px]  flex flex-col gap-4  items-center bg-white">
+                                        <div className="h-[134px]">
+                                            <img className="max-h-[132px] max-w-[132px]" src={pizza} alt="Slide 2" />
+                                        </div>
 
-                                </div>
+                                        <hr class="w-[20%] border-2 border-red-600 rounded-md" />
+
+                                        <div>
+                                            <h3 className="font-Bebas lg:text-2xl lg:leading-9 text-center uppercase font-bold">Spacial Pizza </h3>
+                                            <span className="block lg:font-Roboto text-base leading-8 font-normal  text-gray-500 text-center">Barbecue Italian cuisine pizza</span>
+                                        </div>
+
+
+                                    </div>
 
                                 </div>
                                 <div className="mb-8">
-                                    <div className="py-6 px-4 flex flex-col gap-4 items-center bg-white"><img className="max-h-44 max-w-36" src={fries} alt="Slide 3" />
+                                    <div className="p-8  min-h-[300px] flex flex-col gap-4 items-center bg-white">
+                                        <div className="h-[134px]">
+                                            <img className="max-h-[117px] max-w-[175px]" src={fries} alt="Slide 3" />
+                                        </div>
+
                                         <hr class="w-[20%] border-2 border-red-600 rounded-md" />
-                                        <h3 className="uppercase font-bold">Spacial French fries </h3>
-                                        <span className="text-gray-500 text-center text-sm">Barbecue Italian cuisine pizza</span>
+                                        <div>
+                                            <h3 className="font-Bebas lg:text-2xl lg:leading-9 text-center uppercase font-bold">Spacial French fries </h3>
+                                            <span className="block lg:font-Roboto text-base leading-8 font-normal  text-gray-500 text-center">Barbecue Italian cuisine pizza</span>
+                                        </div>
+
                                     </div>
                                 </div>
                                 <div className="mb-8">
-                                    <div className="py-6 px-4 flex flex-col gap-4  items-center bg-white"><img className="max-h-44 max-w-36" src={chicken} alt="Slide 4" />
+                                    <div className="p-8  min-h-[300px] flex flex-col gap-4  items-center bg-white">
+                                        <div className="h-[134px]">
+                                            <img className="max-h-[119px] max-w-[179px]" src={chicken} alt="Slide 4" />
+                                        </div>
+
                                         <hr class="w-[20%] border-2 border-red-600 rounded-md" />
-                                        <h3 className="uppercase font-bold">Cuisine Chicken</h3>
-                                        <span className="text-gray-500 text-center text-sm">Barbecue Italian cuisine pizza</span>
+                                        <div>
+                                            <h3 className="font-Bebas lg:text-2xl lg:leading-9 text-center uppercase font-bold">Cuisine Chicken</h3>
+                                            <span className="block lg:font-Roboto text-base leading-8 font-normal  text-gray-500 text-center">Barbecue Italian cuisine pizza</span>
+                                        </div>
+
                                     </div>
                                 </div>
 
@@ -229,12 +258,12 @@ const Home = () => {
 
 
                 <div className="table-booking bg-cover ">
-                    <div className="max-w-5xl py-16 px-6 mx-auto ">
-                        <div className="lg:max-w-md md:max-w-md w-full">
+                    <div className="max-w-container px-4 py-8 lg:py-[120px] lg:py-[100px] mx-auto ">
+                        <div className=" lg:w-[635px] lg:max-h-[548px] w-full">
                             <div className="py-4">
-                                <span className="food-item-subheader text-red-600 font-bold py-2">Book Now</span>
-                                <h2 className="text-3xl uppercase font-bold py-2 text-white">Book Your Table</h2>
-                                <span className="block text-gray-400 max-w-lg">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</span>
+                                <span className="food-item-subheader font-Roboto leading-[26px] lg:leading-8 text-base lg:text-xl food-item-subheader text-red-600 font-bold py-2">Book Now</span>
+                                <h2 className="font-Bebas text-[40px] leading-[48px] lg:text-[62px] lg:leading-[62px] uppercase font-bold pt-2 pb-3 text-white">Book Your Table</h2>
+                                <span className="font-Roboto block text-white font-normal text-base leading-6 max-w-[545px]">Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</span>
                             </div>
 
                             <FormComponent />
@@ -256,31 +285,31 @@ const Home = () => {
                         <img className="w-[270px] absolute top-[100px]  left-[-140px] h-[270px] object-cover rotate-[45deg]" src={SlicedTomato} alt="" />
                     </div>
 
-                    <div className="max-w-5xl py-16 px-6 mx-auto ">
+                    <div className="max-w-container px-4 py-8 lg:py-[120px] lg:py-[100px] mx-auto ">
                         <div>
-                            <span className="food-item-subheader text-red-600 font-bold py-2">Crispy, Every Bite Taste</span>
-                            <h2 className="text-3xl uppercase font-bold py-2">What Some of my Customers Say</h2>
+                            <span className="food-item-subheader font-Roboto leading-[26px] lg:leading-8 text-base lg:text-xl food-item-subheader text-red-600 font-bold py-2">Crispy, Every Bite Taste</span>
+                            <h2 className="font-Bebas text-[40px] leading-[48px] lg:text-[62px] lg:leading-[62px] uppercase font-bold py-2">What Some of my Customers Say</h2>
                         </div>
                         <div className="carousel py-10">
 
                             <CarouselComponent slidesToShow={1} mdShow={1} autoplay={false} >
                                 <div className="mb-1">
-                                    <div className="flex flex-col-reverse md:flex-row relative">
-                                        <div className="flex-[40%] bg-tableyellow p-12 ">
-                                            <div className="flex flex-col gap-20 border-b-2  border-gray-800">
+                                    <div className="flex flex-col-reverse lg:w-[1320px] lg:h-[555.97px] md:flex-row relative">
+                                        <div className="flex-1 bg-tableyellow p-12 flex justify-center lg:max-w-[556.45px]">
+                                            <div className="flex flex-col gap-20 w-[359.92px] ">
                                                 <div>
                                                     <span className="comment"></span>
-                                                    <p >You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly,
+                                                    <p className="font-Roboto font-normal text-xl leading-[34px]">one You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly,
                                                         juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.</p>
                                                 </div>
 
 
-                                                <div className=" py-2 flex justify-between items-center">
+                                                <div className="border-gray-800 border-b-2 py-2 flex justify-between items-center">
                                                     <div>
-                                                        <p className="font-bold">Khalid Al Dawsry</p>
-                                                        <span>Jeddah, Saudi</span>
+                                                        <p className="font-Bebas text-lg leading-[19.98px] font-bold">Khalid Al Dawsry</p>
+                                                        <span className="font-Roboto font-normal text-sm leading-[13.32px">Jeddah, Saudi</span>
                                                     </div>
-                                                    <div className="relative">
+                                                    <div className="relative ">
                                                         <div className="comment-profile-image">
                                                             <img className="w-[40px] h-[40px] rounded-[50%] object-cover" src={profile} alt="" />
                                                         </div>
@@ -293,7 +322,7 @@ const Home = () => {
                                             </div>
 
                                         </div>
-                                        <div className="flex-[60%]">
+                                        <div className="w-full">
 
 
                                             <div className="video-wrapper h-[350px] md:h-full lg:h-full">
@@ -326,22 +355,22 @@ const Home = () => {
 
                                 </div>
                                 <div className="mb-1">
-                                    <div className="flex flex-col-reverse md:flex-row relative">
-                                        <div className="flex-[40%] bg-tableyellow p-12 ">
-                                            <div className="flex flex-col gap-20 border-b-2  border-gray-800">
+                                    <div className="flex flex-col-reverse lg:w-[1320px] lg:h-[555.97px] md:flex-row relative">
+                                        <div className="flex-1 bg-tableyellow p-12 flex justify-center lg:max-w-[556.45px]">
+                                            <div className="flex flex-col gap-20 w-[359.92px] ">
                                                 <div>
                                                     <span className="comment"></span>
-                                                    <p >You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly,
+                                                    <p className="font-Roboto font-normal text-xl leading-[34px]">one You can't go wrong with Chicken Mandi, I had it twice. The chicken was cooked perfectly,
                                                         juicy & soft (usually mandi chicken is a bit dry). I would defiantly recommend it.</p>
                                                 </div>
 
 
-                                                <div className=" py-2 flex justify-between items-center">
+                                                <div className="border-gray-800 border-b-2 py-2 flex justify-between items-center">
                                                     <div>
-                                                        <p className="font-bold">Khalid Al Dawsry</p>
-                                                        <span>Jeddah, Saudi</span>
+                                                        <p className="font-Bebas text-lg leading-[19.98px] font-bold">Khalid Al Dawsry</p>
+                                                        <span className="font-Roboto font-normal text-sm leading-[13.32px">Jeddah, Saudi</span>
                                                     </div>
-                                                    <div className="relative">
+                                                    <div className="relative ">
                                                         <div className="comment-profile-image">
                                                             <img className="w-[40px] h-[40px] rounded-[50%] object-cover" src={profile} alt="" />
                                                         </div>
@@ -354,7 +383,7 @@ const Home = () => {
                                             </div>
 
                                         </div>
-                                        <div className="flex-[60%]">
+                                        <div className="w-full">
 
 
                                             <div className="video-wrapper h-[350px] md:h-full lg:h-full">
@@ -386,6 +415,7 @@ const Home = () => {
 
 
                                 </div>
+
 
                             </CarouselComponent>
 

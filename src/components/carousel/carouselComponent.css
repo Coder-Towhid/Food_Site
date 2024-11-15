@@ -6,7 +6,7 @@
     color: "#FF6347";
     width: 34px;
     height: 34px;
-    top: -64px;
+    top: -74px;
     right: 20px;
     padding: 14px;
 }
@@ -36,11 +36,11 @@
 @media (max-width: 768px) {
     .slick-prev {
         left: 40%;
-        top: 106%;
+        top: 105%;
     }
 
     .slick-next {
         left: 55%;
-        top: 106%;
+        top: 105%;
     }
 }

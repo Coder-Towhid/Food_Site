@@ -62,28 +62,31 @@ const FormComponent = () => {
 
                     <input
                         name="email"
+                        type="email"
                         value={formData.email}
                         onChange={handleChange}
                         className="p-2 w-full  my-4 lg:m-0 md:m-0 flex-1 bg-transparent placeholder-white border border-bg-white* text-white"
-                        type="text"
+
                         placeholder="Your Email" />
 
                 </div>
                 <div className=" lg:flex md:flex gap-12 ">
 
+                    <div className="flex-1">
+                        <input
+                            name="date"
+                            value={formData.date}
+                            onChange={handleChange}
+                            placeholder={formData.date ? '' : 'Reservation Date'}
+                            min={new Date().toISOString().split('T')[0]}
+                            className={`${formData.date ? 'dateShow' : 'dateHide'} p-2 my-4 lg:m-0 md:m-0  w-full flex-1 bg-transparent border border-bg-white* text-white placeholder-white`}
+                            type="date"
 
-                    <input
-                        name="date"
-                        value={formData.date}
-                        onChange={handleChange}
-                        placeholder={formData.date ? '' : 'Reservation Date'}
-                        min={new Date().toISOString().split('T')[0]}
-                        className={`${formData.date ? 'dateShow' : 'dateHide'} p-2 my-4 lg:m-0 md:m-0  w-full flex-1 bg-transparent border border-bg-white* text-white placeholder-white`}
-                        type="date"
+                        />
+                    </div>
 
-                    />
 
-                    <div className="relative">
+                    <div className="relative flex-1">
 
                         <span className="number-wrapper">
 
