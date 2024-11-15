@@ -9,7 +9,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100) {  // Change 100 to the scroll distance you want
+            if (window.scrollY > 50) {  // Change 100 to the scroll distance you want
                 setIsFixed(true);
             } else {
                 setIsFixed(false);
@@ -24,15 +24,11 @@ const Navbar = () => {
 
 
     return (
-        // <div className={`z-20  top-[-200px] ease-in-out ${isFixed
-        //     ? "fixed top-[0px] left-0 w-full redPrimary shadow-lg"
-        //     : "bg-transparent"
-        //     }`}
-        //     style={{ transition: "top 0.5s ease-in-out, box-shadow 0.5s ease-in-out" }}>
+
         <div className={`fixed top-0 left-0 w-full z-20 ${isFixed ? "redPrimary shadow-lg" : "bg-transparent"}`} >
 
-            <header className="z-20 relative text-white py-4">
-                < div className="max-w-5xl flex justify-between mx-auto px-6 items-center">
+            <header className="z-20 relative text-white py-[32px] ">
+                < div className="max-w-container flex justify-between mx-auto px-4 items-center">
                     {/* Logo Section */}
                     < div className="flex items-center gap-12" >
                         <svg width="202" height="38" viewBox="0 0 202 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +46,7 @@ const Navbar = () => {
                         </svg>
 
                         {/* Desktop Navigation */}
-                        <nav className="hidden md:flex items-center gap-4 text-white-500 text-xs">
+                        <nav className="hidden font-Raleway font-medium md:flex items-center gap-4 text-white-500 text-xs">
                             <ul className="flex gap-4">
                                 <li><a href="#">Home</a></li>
                                 <li><a href="/about">About</a></li>
@@ -67,7 +63,7 @@ const Navbar = () => {
 
                     {/* Book a Table Button */}
                     < div className="hidden md:flex items-center" >
-                        <button className="px-6 py-2 font-bold text-black bg-yellow-500  ">
+                        <button className="px-6 py-2.5 uppercase font-Roboto font-bold text-base text-black bg-yellow-500  ">
                             Book a Table
                         </button>
                     </div >
@@ -118,8 +114,8 @@ const Navbar = () => {
                 {/* Mobile Dropdown Menu */}
                 {
                     isMenuOpen && (
-                        <nav className="absolute z-20 w-full md:hidden mobile-nav">
-                            <ul className="flex flex-col gap-4 px-6 py-4">
+                        <nav className="absolute py-6 font-Raleway font-medium z-20 w-full md:hidden mobile-nav">
+                            <ul className="flex flex-col gap-8 px-6 py-4">
                                 <li><a href="#" className="text-white">Home</a></li>
                                 <li><a href="/about" className="text-white">About</a></li>
                                 <li><a href="#" className="text-white">Portfolio</a></li>
@@ -127,7 +123,7 @@ const Navbar = () => {
                                 <li><a href="#" className="text-white">Blog</a></li>
                                 <li><a href="#" className="text-white">Contact</a></li>
                                 <li>
-                                    <button className="w-full px-6 py-2 font-bold bg-yellow-500 text-white rounded">
+                                    <button className="w-full text-base px-6 py-2 text-black uppercase font-Roboto font-bold bg-yellow-500  rounded">
                                         Book a Table
                                     </button>
                                 </li>
